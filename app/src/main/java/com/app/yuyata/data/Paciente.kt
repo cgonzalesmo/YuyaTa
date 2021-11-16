@@ -11,7 +11,7 @@ data class Paciente(
     @ColumnInfo(name = "apellidoMaterno") val pacienteApellidoMat:String,
     @ColumnInfo(name = "dni") val pacienteDni:String,
     @ColumnInfo(name = "fecNac") val pacienteFecNac: String,
-
+    @ColumnInfo(name = "sexo") val pacienteSexo: Boolean,
     ){
     @PrimaryKey(autoGenerate = true) var paciente_id=0
 }

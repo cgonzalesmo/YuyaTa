@@ -19,11 +19,11 @@ interface dao {
     suspend fun insertDosis(st:List<Dosis>)
 
     @Query("Select * from pacientesTable")
-    fun getDosisByPaciente(): LiveData<List<PacienteDosis>>
+    fun getPacientes(): LiveData<List<PacienteDosis>>
 
     @Transaction
     @Query("SELECT * FROM pacientesTable WHERE paciente_id =:paciente_id")
-    fun getById(paciente_id:Int): List<PacienteDosis>
+    fun getDosisById(paciente_id:Int): List<PacienteDosis>
 
     /*@Update
     suspend fun update(personModel: PersonModel)
