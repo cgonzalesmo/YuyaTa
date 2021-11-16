@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">YuyaTa</string>
+    <string name="welcome_title"><b>BIENVENIDO</b></string>
+    <string name="welcome_desc">Porfavor inicia sesion o registrate</string>
+    <string name="welcome_btn_login">Iniciar sesion</string>
+    <string name="welcome_btn_register">Registrarse</string>
+    <string name="register_title"><b>Ingresa tus datos</b></string>
+    <string name="register_input_names">Nombres</string>
+    <string name="register_input_lastnames">Apellidos</string>
+    <string name="register_input_birthdate">Fecha de nacimiento</string>
+    <string name="register_input_dni">Numero de DNI</string>
+    <string name="register_btn_register">Registrarse</string>
+    <string name="login_title"><b>Hola!</b></string>
+    <string name="login_desc">Porfavor ingresa tu DNI para continuar</string>
+    <string name="login_input_dni">Ingresa aqui tu DNI</string>
+    <string name="login_btn_login">INICIAR SESION</string>
 </resources>

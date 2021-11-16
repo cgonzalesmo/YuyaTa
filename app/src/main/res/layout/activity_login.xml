@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/blue_primary"
+    android:paddingHorizontal="30dp">
+
+    <TextView
+        android:id="@+id/lv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_title"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"/>
+    
+    <TextView
+        android:id="@+id/lv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_desc"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintTop_toBottomOf="@id/lv_title"
+        app:layout_constraintLeft_toLeftOf="@id/lv_title"/>
+    
+    <EditText
+        android:id="@+id/lv_input_dni"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/login_input_dni"
+        android:background="@drawable/register_input_bg"
+        android:inputType="phone"
+        android:maxLength="8"
+        app:layout_constraintTop_toBottomOf="@id/lv_desc"
+        app:layout_constraintLeft_toLeftOf="@id/lv_desc"
+        android:drawableStart="@drawable/ic_identity"
+        android:drawablePadding="12dp"
+        android:paddingHorizontal="12dp"
+        android:layout_marginTop="60dp" />
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lv_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/login_btn_login"
+        android:background="@drawable/welcome_btn"
+        app:layout_constraintTop_toBottomOf="@id/lv_input_dni"
+        app:layout_constraintLeft_toLeftOf="@id/lv_input_dni"
+        android:textSize="24sp"
+        android:textColor="@color/blue_primary"
+        android:layout_marginTop="40dp"
+        android:onClick="onLoginUserButtonClick"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/doctor"
+        app:layout_constraintTop_toBottomOf="@id/lv_btn_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="70dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
