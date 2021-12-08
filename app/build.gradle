@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -34,8 +35,9 @@ android {
         exclude 'META-INF/atomicfu.kotlin_module'
     }
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
     }
+
 }
 
 dependencies {
@@ -47,6 +49,7 @@ dependencies {
 
     // Room components
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
@@ -62,6 +65,8 @@ dependencies {
 
     // UI
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    // To use constraintlayout in compose
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
 
     // Testing
@@ -71,4 +76,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$rootProject.nav_version")
 }

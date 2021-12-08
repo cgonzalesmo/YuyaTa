@@ -6,8 +6,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
+        def nav_version = "2.3.5"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         classpath "com.android.tools.build:gradle:7.0.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -30,4 +32,6 @@ ext {
     junitVersion = '4.13.2'
     espressoVersion = '3.1.0'
     androidxJunitVersion = '1.1.2'
+    // NAV
+    nav_version = "2.3.5"
 }
