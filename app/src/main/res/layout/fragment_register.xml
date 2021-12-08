@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.yuyata.register.RegisterFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="myRegisterViewModel"
+            type="com.app.yuyata.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_primary"
+        >
+
+        <TextView
+            android:id="@+id/rv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/rv_form"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_card"
+            app:layout_constraintTop_toBottomOf="@id/rv_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="40dp"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/rv_input_names"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/register_input_names"
+                android:background="@drawable/register_input_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:inputType="text"
+                android:ems="10"
+                android:text="@={myRegisterViewModel.inputFirstName}"
+                />
+            <EditText
+                android:id="@+id/rv_input_lastnames"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/register_input_lastnames"
+                android:background="@drawable/register_input_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:inputType="text"
+                android:ems="10"
+                android:text="@={myRegisterViewModel.inputLastName}"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <EditText
+                    android:id="@+id/rv_input_birthday"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:hint="@string/register_input_birthdate"
+                    android:background="@drawable/register_input_bg"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:inputType="date"
+                    android:ems="10"
+                    android:layout_marginEnd="10dp"
+                    android:text="@={myRegisterViewModel.inputFecha}"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rv_rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_mars"
+                        android:layout_marginEnd="5dp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rv_rb_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_venus" />
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/rv_input_dni"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/register_input_dni"
+                android:background="@drawable/register_input_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:inputType="text"
+                android:ems="10"
+                android:text="@={myRegisterViewModel.inputDni}"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rv_btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/register_btn_bg"
+                android:text="@string/register_btn_register"
+                android:textColor="@color/white"
+                android:onClick="@{()->myRegisterViewModel.sumbitButton()}"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/doctor"
+            app:layout_constraintTop_toBottomOf="@id/rv_form"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
