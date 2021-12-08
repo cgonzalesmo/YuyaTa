@@ -7,7 +7,7 @@ import androidx.room.*
 interface dao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPaciente(st:List<Paciente>)
+    suspend fun insertPaciente(st:Paciente)
 
     @Update
     suspend fun updatePaciente(st:List<Paciente>)

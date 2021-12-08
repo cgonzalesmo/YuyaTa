@@ -15,7 +15,7 @@ class repository (private val modelDao: dao) {
         return modelDao.getDosisById(paciente_id)
     }
 
-    suspend fun insertPaciente(paciente: List<Paciente>){
+    suspend fun insertPaciente(paciente: Paciente){
         modelDao.insertPaciente(paciente)
     }
     suspend fun updatePaciente(paciente: List<Paciente>){
