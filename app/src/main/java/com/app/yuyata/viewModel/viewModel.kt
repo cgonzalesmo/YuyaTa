@@ -28,7 +28,7 @@ class viewModel (application: Application): AndroidViewModel(application){
     fun updatePaciente(pacientes:List<Paciente>) = viewModelScope.launch(Dispatchers.IO){
         modelRepository.updatePaciente(pacientes)
     }
-    fun insertPaciente(pacientes:List<Paciente>) = viewModelScope.launch(Dispatchers.IO){
+    fun insertPaciente(pacientes:Paciente) = viewModelScope.launch(Dispatchers.IO){
         modelRepository.insertPaciente(pacientes)
     }
     fun insertDosis(dosis:List<Dosis>) = viewModelScope.launch(Dispatchers.IO){

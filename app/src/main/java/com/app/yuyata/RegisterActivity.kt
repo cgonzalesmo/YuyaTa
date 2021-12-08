@@ -17,7 +17,7 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvBtnRegister.setOnClickListener {
+        /*binding.rvBtnRegister.setOnClickListener {
             val intent = Intent()
             val namUs=binding.rvInputNames.text.toString()
             val apPat=binding.rvInputLastnames.text.toString()
@@ -32,12 +32,12 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("DNI",dniUs)
             setResult(RESULT_OK,intent)
             finish()
-        }
+        }*/
     }
 
 
-    override fun onBackPressed() {
+    /*override fun onBackPressed() {
         setResult(RESULT_CANCELED)
         finish()
-    }
+    }*/
 }

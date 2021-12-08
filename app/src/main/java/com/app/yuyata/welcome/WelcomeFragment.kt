@@ -24,14 +24,14 @@ class WelcomeFragment : Fragment() {
         val registerButton : Button = view.findViewById(R.id.wv_btn_register)
         val loginButton : Button = view.findViewById(R.id.wv_btn_login)
 
-        /*registerButton.setOnClickListener {
+        registerButton.setOnClickListener {
             val action = WelcomeFragmentDirections.actionWelcomeFragmentToRegisterFragment()
             NavHostFragment.findNavController(this).navigate(action)
         }
         loginButton.setOnClickListener {
             val action = WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment()
             NavHostFragment.findNavController(this).navigate(action)
-        }*/
+        }
 
 
 

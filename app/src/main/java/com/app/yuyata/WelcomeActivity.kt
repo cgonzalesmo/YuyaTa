@@ -21,10 +21,10 @@ import kotlinx.coroutines.launch
 
 class WelcomeActivity : AppCompatActivity() {
 
-    lateinit var ViewModel:viewModel
+    //lateinit var ViewModel:viewModel
     private lateinit var binding: ActivityWelcomeBinding
 
-    private val responseLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+    /*private val responseLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         activityResult->
         if(activityResult.resultCode == RESULT_OK){
             val name = activityResult.data?.getStringExtra("NAME").orEmpty()
@@ -38,17 +38,17 @@ class WelcomeActivity : AppCompatActivity() {
             ViewModel.insertPaciente(pacienteList)
         }else{
             Toast.makeText(this, "Registro de Usuario cancelado", Toast.LENGTH_SHORT).show()        }
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.wvBtnRegister.setOnClickListener {
+        /*binding.wvBtnRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             responseLauncher.launch(intent)
-        }
+        }*/
 
         /*val pacienteList: List<Paciente> = arrayListOf(
             Paciente("Juan","Gonza","Moli", "73966540", "null",true),
@@ -83,10 +83,10 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     //Register button on click
-    fun onRegisterButtonClick(view: View){
+    /*fun onRegisterButtonClick(view: View){
         var intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
-    }
+    }*/
 
     //Login button on click
     /*fun onLoginButtonClick(view: View){
