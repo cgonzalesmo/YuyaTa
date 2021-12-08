@@ -25,6 +25,10 @@ interface dao {
     @Query("SELECT * FROM pacientesTable WHERE paciente_id =:paciente_id")
     fun getDosisById(paciente_id:Int): List<PacienteDosis>
 
+    @Transaction
+    @Query("SELECT * FROM pacientesTable WHERE dni =:pacienteDni")
+    suspend fun getPacienteDni(pacienteDni: String): PacienteDosis
+
     /*@Update
     suspend fun update(personModel: PersonModel)
 
