@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnDosis"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp"
+    android:gravity="center_vertical">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_baseline_medical_services_24"
+        android:padding="15dp"
+        app:tint="@color/blue_primary"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNombreMedicamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Nombre medicamento"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/txtHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Hora: 8:00 pm"
+            />
+        <TextView
+            android:id="@+id/txtCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="01 comprimido(s)"/>
+    </LinearLayout>
+
+
+    <!--Cree 3 drawables con el fondo y los colores correspondientes a cada estad
+     NO REALIZADO
+     COMPLETO
+     ATRASADO
+
+     CAMBIAR EN EL ADAPTADOR DEL RECYCLER-->
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:id="@+id/txtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="No realizado"
+        android:textSize="12sp"
+        android:padding="5dp"
+        android:background="@drawable/state_bg_nr"
+        android:textStyle="bold" />
+
+</LinearLayout>
