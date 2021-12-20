@@ -1,15 +1,15 @@
+package com.app.yuyata
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.app.yuyata.R
 import com.app.yuyata.data.Dosis
 import java.text.SimpleDateFormat
 
-class CustomAdapter(private val items: ArrayList<Dosis>) :
+class CustomAdapter(private val items: List<Dosis>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     /**
