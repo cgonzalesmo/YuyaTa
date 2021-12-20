@@ -1,5 +1,6 @@
 package com.app.yuyata.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment
+import com.app.yuyata.DashboardActivity
 import com.app.yuyata.R
 import com.app.yuyata.data.database
 import com.app.yuyata.databinding.FragmentLoginBinding
@@ -76,7 +77,8 @@ class LoginFragment : Fragment() {
         loginViewModel.navigateToHome.observe(viewLifecycleOwner, Observer { hasFinished->
             if (hasFinished == true){
                 Log.i("Login F","Se finalizo login")
-                navigateToHome()
+                Log.i("Login F: ",loginViewModel.inputId.toString())
+                navigateToHome(loginViewModel.inputId)
                 loginViewModel.doneNavigatingUserDetails()
             }
         })
@@ -86,10 +88,13 @@ class LoginFragment : Fragment() {
 
 
 
-    private fun navigateToHome() {
+    private fun navigateToHome(userId: Int) {
         Log.i("Login F","Entrar a home")
-        val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
-        NavHostFragment.findNavController(this).navigate(action)
+        //val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+        //NavHostFragment.findNavController(this).navigate(action)
+        val dashBoardIntent = Intent(getActivity(), DashboardActivity::class.java)
+        dashBoardIntent.putExtra("userId",userId)
+        getActivity()?.startActivity(dashBoardIntent)
     }
 
     //En caso se quiera ir a register desde login

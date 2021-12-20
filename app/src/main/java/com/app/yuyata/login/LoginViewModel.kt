@@ -16,6 +16,9 @@ import kotlinx.coroutines.launch
 class LoginViewModel(private val repository: repository, application: Application) :
     AndroidViewModel(application), Observable {
 
+
+    var inputId: Int = 0
+
     @Bindable
     val inputDni = MutableLiveData<String?>()
 
@@ -64,9 +67,10 @@ class LoginViewModel(private val repository: repository, application: Applicatio
         else {
             uiScope.launch {
                 //Se verifica que exista el usuario
-                val usersNames = repository.getPacienteDni(inputDni.value!!)
-                Log.i("Login VM", usersNames.toString() + "---")
-                if (usersNames != null) {
+                val user = repository.getPacienteDni(inputDni.value!!)
+                if (user != null) {
+                    inputId = user.paciente.paciente_id
+
                     //if(usersNames.passwrd == inputPassword.value){
                     inputDni.value = null
                     //inputPassword.value = null

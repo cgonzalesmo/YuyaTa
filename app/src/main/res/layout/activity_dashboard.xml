@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/btnAñadir"
+        android:id="@+id/btnAdd"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_baseline_add_24"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Tienes 8 medicamentos pendientes para hoy"
-        app:layout_constraintTop_toBottomOf="@id/btnAñadir"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toLeftOf="parent"/>
