@@ -47,14 +47,14 @@ class RegisterFragment : Fragment() {
         //Observar si se ha cambiado el valor de error de campos  (errorToastCampos==true)
         registerViewModel.errorToastCampos.observe(viewLifecycleOwner, Observer { hasError->
             if(hasError==true){
-                Toast.makeText(requireContext(), "Completar campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), this.getString(R.string.CompleteFields), Toast.LENGTH_SHORT).show()
                 registerViewModel.donetoast()
             }
         })
         //Observar si se ha cambiado el valor de error de Usuario existente  (errortoastUsuario==true)
         registerViewModel.errortoastUsuario.observe(viewLifecycleOwner, Observer { hasError->
             if(hasError==true){
-                Toast.makeText(requireContext(), "Usuario ya creado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), this.getString(R.string.ExistingUser), Toast.LENGTH_SHORT).show()
                 registerViewModel.donetoastUserName()
             }
         })

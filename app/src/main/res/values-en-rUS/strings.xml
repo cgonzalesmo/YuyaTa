@@ -19,4 +19,7 @@
     <string name="Doses">Doses</string>
     <string name="Map">Map</string>
     <string name="Statitic">Statitic</string>
+    <string name="CompleteFields">Complete fields</string>
+    <string name="ExistingUser">Existing user</string>
+    <string name="ThisUserDoesNotExit">This user does not exit! Please register</string>
 </resources>

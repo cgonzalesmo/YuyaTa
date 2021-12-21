@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
         //Observar si se ha cambiado el valor de error de null en campos  (errorNullToast==true)
         loginViewModel.errorNullToast.observe(viewLifecycleOwner, Observer { hasError->
             if(hasError==true){
-                Toast.makeText(requireContext(), "Completar campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), this.getString(R.string.CompleteFields), Toast.LENGTH_SHORT).show()
                 loginViewModel.doneErrorNullToast()
             }
         })
@@ -61,7 +61,7 @@ class LoginFragment : Fragment() {
         //Observar si se ha cambiado el valor de error de Usuario  (errotoastUsername==true)
         loginViewModel.errotoastUsername .observe(viewLifecycleOwner, Observer { hasError->
             if(hasError==true){
-                Toast.makeText(requireContext(), "Usuario no existe por favor registarse", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), this.getString(R.string.ThisUserDoesNotExit), Toast.LENGTH_SHORT).show()
                 loginViewModel.donetoastErrorUsername()
             }
         })

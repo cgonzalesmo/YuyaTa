@@ -14,11 +14,12 @@
     <string name="login_desc">Por favor ingresa tu DNI para continuar</string>
     <string name="login_input_dni">Ingresa aquí tu DNI</string>
     <string name="login_btn_login">INICIAR SESIÓN</string>
-
     <string name="Doses">Dosis</string>
     <string name="Map">Mapa</string>
     <string name="Statitic">Estadística</string>
-
+    <string name="CompleteFields">Completar campos</string>
+    <string name="ExistingUser">Usuario ya creado</string>
+    <string name="ThisUserDoesNotExit">El usuario no existe, por favor registrarse!</string>
 
     <string name="hello_blank_fragment">Hola fragment vacío</string>
     <!-- TODO: Remove or change this placeholder text -->
