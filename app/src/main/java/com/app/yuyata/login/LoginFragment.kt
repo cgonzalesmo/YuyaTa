@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.app.yuyata.DashboardActivity
+import com.app.yuyata.dashboard.DashboardActivity
 import com.app.yuyata.R
 import com.app.yuyata.data.database
 import com.app.yuyata.databinding.FragmentLoginBinding

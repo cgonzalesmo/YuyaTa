@@ -1,25 +1,44 @@
-package com.app.yuyata
+package com.app.yuyata.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.app.yuyata.CustomAdapter
+import com.app.yuyata.R
+import com.app.yuyata.dashboard.dosis.DosisFragment
 import com.app.yuyata.data.Dosis
 import com.app.yuyata.data.database
+import com.app.yuyata.databinding.ActivityDashboardBinding
 import com.app.yuyata.viewModel.repository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var adapter: CustomAdapter
+    private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val dosisFragment = DosisFragment()
+
+        makeCurrentFragment(dosisFragment)
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.ic_dosis -> makeCurrentFragment(dosisFragment)
+            }
+            true
+        }
 
 
-        val dao = database.invoke(application).detailDao()
+
+        /*val dao = database.invoke(application).detailDao()
         val repository = repository(dao)
 
         var pacienteId = intent.getIntExtra("userId",0)
@@ -38,7 +57,15 @@ class DashboardActivity : AppCompatActivity() {
         adapter = CustomAdapter(dosisList);
 
         var recyclerView = findViewById<RecyclerView>(R.id.rvDosis);
-        recyclerView.adapter = adapter;
+        recyclerView.adapter = adapter;*/
 
+
+
+    }
+
+    private fun makeCurrentFragment(fragment : Fragment) =
+        supportFragmentManager.beginTransaction().apply{
+            replace(R.id.fl_wrapper, fragment)
+            commit()
     }
 }
