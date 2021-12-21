@@ -3,15 +3,15 @@
     <item
         android:id="@+id/ic_dosis"
         android:icon="@drawable/ic_baseline_local_hospital_24"
-        android:title="Dosis"/>
+        android:title="@string/Doses"/>
     <item
         android:id="@+id/ic_mapa"
         android:icon="@drawable/ic_baseline_map_24"
-        android:title="Mapa"/>
+        android:title="@string/Map"/>
     <item
         android:id="@+id/ic_graph"
         android:icon="@drawable/ic_baseline_auto_graph_24"
-        android:title="Grafico"/>
+        android:title="@string/Statitics"/>
 
 
 

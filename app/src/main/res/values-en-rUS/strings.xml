@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YuyaTa</string>
+    <string name="welcome_title">WELCOME</string>
+    <string name="welcome_desc">Please, login or register</string>
+    <string name="welcome_btn_login">Login</string>
+    <string name="welcome_btn_register">Register</string>
+    <string name="register_title"><b>Enter your personal information</b></string>
+    <string name="register_input_names">Names</string>
+    <string name="register_input_lastnames">Last names</string>
+    <string name="register_input_dni">DNI number</string>
+    <string name="register_btn_register">Register</string>
+    <string name="login_title"><b>Hello!</b></string>
+    <string name="login_desc">Please, enter your DNI to continue</string>
+    <string name="login_input_dni">Enter your DNI</string>
+    <string name="login_btn_login">LOG IN</string>
+    <string name="register_input_birthdate">Date of birth</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Doses">Doses</string>
+    <string name="Map">Map</string>
+    <string name="Statitics">Statitics</string>
+</resources>
