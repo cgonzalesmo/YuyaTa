@@ -17,7 +17,8 @@
 
     <string name="Doses">Dosis</string>
     <string name="Map">Mapa</string>
-    <string name="Statitics">Estadística</string>
+    <string name="Statitic">Estadística</string>
+
 
     <string name="hello_blank_fragment">Hola fragment vacío</string>
     <!-- TODO: Remove or change this placeholder text -->

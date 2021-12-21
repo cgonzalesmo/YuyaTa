@@ -13,10 +13,10 @@
     <string name="login_title"><b>Hello!</b></string>
     <string name="login_desc">Please, enter your DNI to continue</string>
     <string name="login_input_dni">Enter your DNI</string>
-    <string name="login_btn_login">LOG IN</string>
+    <string name="login_btn_login">LOGIN</string>
     <string name="register_input_birthdate">Date of birth</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Doses">Doses</string>
     <string name="Map">Map</string>
-    <string name="Statitics">Statitics</string>
+    <string name="Statitic">Statitic</string>
 </resources>
