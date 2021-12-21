@@ -10,6 +10,8 @@ import com.app.yuyata.dashboard.dosis.DosisFragment
 import com.app.yuyata.data.Dosis
 import com.app.yuyata.data.database
 import com.app.yuyata.databinding.ActivityDashboardBinding
+import com.app.yuyata.graphics.GraphicsFragment
+import com.app.yuyata.maps.MapsFragment
 import com.app.yuyata.viewModel.repository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -28,10 +30,16 @@ class DashboardActivity : AppCompatActivity() {
 
         val dosisFragment = DosisFragment()
 
+        val mapsFragment = MapsFragment()
+
+        val graphsFragment = GraphicsFragment()
+
         makeCurrentFragment(dosisFragment)
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.ic_dosis -> makeCurrentFragment(dosisFragment)
+                R.id.ic_mapa -> makeCurrentFragment(mapsFragment)
+                R.id.ic_graph -> makeCurrentFragment(graphsFragment)
             }
             true
         }
