@@ -36,5 +36,7 @@
     <string name="toast_location_permission_2">Ve a ajustes y acepta los permisos</string>
     <string name="current_location">Mi Ubicacion Actual es</string>
 
+    <string name="Amount_of_medicines_per_day">Cantidad de medicinas por día</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

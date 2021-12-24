@@ -35,5 +35,6 @@
     <string name="toast_location_search">Please type your search</string>
     <string name="toast_location_permission_2">Go to settings and accept the permissions</string>
     <string name="current_location">My current location is</string>
+    <string name="Amount_of_medicines_per_day">Amount of medicines per day</string>
 
 </resources>
