@@ -93,10 +93,10 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                         map.animateCamera(CameraUpdateFactory.zoomTo(15f))
                     }
                 }else{
-                    Toast.makeText(requireActivity(), "Localización No Encontrada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireActivity(), this.getString(R.string.toast_location_not_found), Toast.LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(requireActivity(), "Escriba su busqueda por favor", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), this.getString(R.string.toast_location_search), Toast.LENGTH_SHORT).show()
             }
         }
         checkPermissions()
@@ -137,7 +137,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                 Manifest.permission.ACCESS_FINE_LOCATION
             )
         ) {
-            Toast.makeText(activity, "Ve a ajustes y acepta los permisos", Toast.LENGTH_SHORT)
+            Toast.makeText(activity, this.getString(R.string.toast_location_permission_2), Toast.LENGTH_SHORT)
                 .show()
         } else {
             ActivityCompat.requestPermissions(
@@ -160,7 +160,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
             } else {
                 Toast.makeText(
                     activity,
-                    "Para activar la localización ve a ajustes y acepta los permisos",
+                    this.getString(R.string.toast_location_permission_2),
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -175,7 +175,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
             map.isMyLocationEnabled = false
             Toast.makeText(
                 activity,
-                "Para activar la localización ve a ajustes y acepta los permisos",
+                this.getString(R.string.toast_location_permission_2),
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -199,7 +199,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
     private fun createMarker() {
         val coordinate = LatLng(latU, longU)
         val marker =
-            MarkerOptions().position(coordinate).title("Mi Ubicación Actual " + latU + "," + longU)
+            MarkerOptions().position(coordinate).title(this.getString(R.string.current_location) + latU + "," + longU)
         map.addMarker(marker)
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(coordinate, 18f), 4000, null)
     }
