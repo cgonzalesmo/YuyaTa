@@ -38,5 +38,10 @@
 
     <string name="Amount_of_medicines_per_day">Cantidad de medicinas por día</string>
 
+    <string name="have">Tienes </string>
+    <string name="pending"> medicamentos pendientes para hoy</string>
+
+    <string name="search">Buscar</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
