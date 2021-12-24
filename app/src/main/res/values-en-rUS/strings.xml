@@ -31,5 +31,9 @@
     <string name="newdosis_form_No_Realizado">No complete </string>
     <string name="date">Date</string>
     <string name="hour">Hour</string>
+    <string name="toast_location_not_found">Location Not Found</string>
+    <string name="toast_location_search">Please type your search</string>
+    <string name="toast_location_permission_2">Go to settings and accept the permissions</string>
+    <string name="current_location">My current location is</string>
 
 </resources>
