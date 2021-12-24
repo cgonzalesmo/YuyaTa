@@ -23,7 +23,7 @@ interface dao {
 
     @Transaction
     @Query("SELECT * FROM pacientesTable WHERE paciente_id =:paciente_id")
-    fun getDosisById(paciente_id:Int): List<PacienteDosis>
+    fun getDosisById(paciente_id:Int): LiveData<List<PacienteDosis>>
 
     @Transaction
     @Query("SELECT * FROM pacientesTable WHERE dni =:pacienteDni")

@@ -2,6 +2,7 @@ package com.app.yuyata.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.app.yuyata.CustomAdapter
@@ -28,7 +29,17 @@ class DashboardActivity : AppCompatActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val userId = intent.getIntExtra("userId",1)
+        Log.i("DB-Dosis Id",""+userId)
+
+
+        val bundle = Bundle()
+        bundle.putInt("userId",userId)
+
+
         val dosisFragment = DosisFragment()
+        dosisFragment.arguments = bundle
+        makeCurrentFragment(dosisFragment)
 
         val mapsFragment = MapsFragment()
 

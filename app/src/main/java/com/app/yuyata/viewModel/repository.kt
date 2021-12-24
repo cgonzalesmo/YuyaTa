@@ -11,7 +11,7 @@ class repository (private val modelDao: dao) {
 
     val allPacientes: LiveData<List<PacienteDosis>> = modelDao.getPacientes()
 
-    fun getDosisById(paciente_id:Int): List<PacienteDosis>{
+    fun getDosisById(paciente_id:Int): LiveData<List<PacienteDosis>>{
         return modelDao.getDosisById(paciente_id)
     }
 

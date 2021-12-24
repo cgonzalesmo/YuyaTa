@@ -22,4 +22,10 @@
     <string name="CompleteFields">Complete fields</string>
     <string name="ExistingUser">Existing user</string>
     <string name="ThisUserDoesNotExit">This user does not exit! Please register</string>
+    <string name="newdosis_title"><b>Register</b> new doses</string>
+    <string name="newdosis_form_names_hint">Name</string>
+    <string name="newdosis_form_Fecha_hint">Date </string>
+    <string name="newdosis_form_Estado_hint">State </string>
+    <string name="newdosis_form_Completo">Complete </string>
+    <string name="newdosis_form_No_Realizado">No complete </string>
 </resources>

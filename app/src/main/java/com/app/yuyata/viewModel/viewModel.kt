@@ -21,6 +21,9 @@ class viewModel (application: Application): AndroidViewModel(application){
         modelRepository = repository(dao)
         allPacientes = modelRepository.allPacientes
     }
+    fun getDosisById(paciente_id:Int): LiveData<List<PacienteDosis>>{
+        return modelRepository.getDosisById(paciente_id)
+    }
 
     fun deletePaciente(pacientes:List<Paciente>) = viewModelScope.launch(Dispatchers.IO){
         modelRepository.deletePaciente(pacientes)

@@ -21,6 +21,12 @@
     <string name="ExistingUser">Usuario ya creado</string>
     <string name="ThisUserDoesNotExit">El usuario no existe, por favor registrarse!</string>
 
+    <string name="newdosis_title"><b>Registrar</b> nueva dosis</string>
+    <string name="newdosis_form_names_hint">Nombre </string>
+    <string name="newdosis_form_Fecha_hint">Fecha </string>
+    <string name="newdosis_form_Estado_hint">Estado </string>
+    <string name="newdosis_form_Completo">Completo </string>
+    <string name="newdosis_form_No_Realizado">No realizado </string>
     <string name="hello_blank_fragment">Hola fragment vacío</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
