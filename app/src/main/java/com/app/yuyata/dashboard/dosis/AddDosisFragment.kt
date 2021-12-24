@@ -124,6 +124,7 @@ class AddDosisFragment : Fragment(),DatePickerDialog.OnDateSetListener, TimePick
     }
     private fun pickDate(){
         setDate.setOnClickListener{
+            getDateTimeCalendar()
             DatePickerDialog(requireContext(),this,year,month,dav).show()
         }
     }
@@ -133,7 +134,7 @@ class AddDosisFragment : Fragment(),DatePickerDialog.OnDateSetListener, TimePick
         savedMonth = month
         savedYear = year
 
-        getDateTimeCalendar()
+
         TimePickerDialog(requireContext(),this,hour,minute,true).show()
 
     }
