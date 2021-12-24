@@ -19,6 +19,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.requestPermissions
@@ -50,7 +51,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
     private lateinit var map: GoogleMap
 
     //Button
-    lateinit var searchButton: Button
+    lateinit var searchButton: ImageButton
 
     //Coordenadas
     var latU: Double = 0.0

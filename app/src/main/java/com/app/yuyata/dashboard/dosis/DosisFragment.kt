@@ -84,7 +84,7 @@ class DosisFragment : Fragment(), DosisClickInterface, DosisClickDeleteInterface
                 name.setText(paciente.pacienteName)
                 apellido.setText(paciente.pacienteApellidoMat)
                 edad.setText(paciente.pacienteFecNac)
-                cantMed.setText(this.getString(R.string.have)+ dosis.size+this.getString(R.string.pending))
+                cantMed.setText(this.getString(R.string.have)+" " +dosis.size+" "+this.getString(R.string.pending))
                 Log.i("Dosis",dosis.toString())
                 dosisRVAdapter.updateList(dosis)
             }
