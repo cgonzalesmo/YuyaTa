@@ -29,7 +29,7 @@
     <string name="newdosis_form_Completo">Complete </string>
 
     <string name="newdosis_form_No_Realizado">No complete </string>
-    <string name="date">Fecha</string>
-    <string name="hour">Hora</string>
+    <string name="date">Date</string>
+    <string name="hour">Hour</string>
 
 </resources>
