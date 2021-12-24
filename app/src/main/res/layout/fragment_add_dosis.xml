@@ -45,8 +45,6 @@
 
 
 
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/np_input_nombres"
                 android:layout_width="match_parent"
@@ -67,24 +65,30 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/np_input_fecha"
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/newdosis_form_Fecha_hint"
-                android:textColorHint="#7A7A76"
-                android:layout_marginBottom="10dp"
-                android:elevation="10dp">
+                android:padding="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/np_tit_fecha"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/btnSelectDate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray_unfocus"
-                    android:maxLines="1"
-                    android:textColor="#000000" />
+                    android:text="Fecha"
+                    android:textColor="@color/white"
+                    android:background="@drawable/register_btn_bg"
+                    />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    tools:text="@tools:sample/date/ddmmyy"
+                    android:textSize="16dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
                 android:layout_width="wrap_content"

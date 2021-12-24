@@ -27,5 +27,9 @@
     <string name="newdosis_form_Fecha_hint">Date </string>
     <string name="newdosis_form_Estado_hint">State </string>
     <string name="newdosis_form_Completo">Complete </string>
+
     <string name="newdosis_form_No_Realizado">No complete </string>
+    <string name="date">Fecha</string>
+    <string name="hour">Hora</string>
+
 </resources>
